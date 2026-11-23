@@ -35,11 +35,11 @@
   <text x="46" y="78" fill="#6e7681" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Courier New', monospace" font-size="10" text-anchor="end">100</text>
 
   <!-- Series -->
-  <path d="M56 126.44 L81.33 174.74 L106.67 125.06 L132 74 L157.33 185.78 L182.67 188.54 L208 86.42 L233.33 199.58 L258.67 203.72 L284 202.34 L309.33 187.16 L334.67 126.44 L360 131.96 L385.33 167.84 L410.67 147.14 L436 181.64 L461.33 159.56 L486.67 130.58 L512 189.92 L537.33 181.64 L562.67 188.54 L588 173.36 L613.33 180.26 L638.67 187.16 L664 155.42 L689.33 140.24 L714.67 207.86 L740 195.44 L765.33 199.58 L790.67 196.82 L816 191.3 L816 212 L56 212 Z" fill="url(#fade)"/>
-  <path d="M56 126.44 L81.33 174.74 L106.67 125.06 L132 74 L157.33 185.78 L182.67 188.54 L208 86.42 L233.33 199.58 L258.67 203.72 L284 202.34 L309.33 187.16 L334.67 126.44 L360 131.96 L385.33 167.84 L410.67 147.14 L436 181.64 L461.33 159.56 L486.67 130.58 L512 189.92 L537.33 181.64 L562.67 188.54 L588 173.36 L613.33 180.26 L638.67 187.16 L664 155.42 L689.33 140.24 L714.67 207.86 L740 195.44 L765.33 199.58 L790.67 196.82 L816 191.3" stroke="#39d353" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+  <path d="M56 126.44 L81.33 173.36 L106.67 126.44 L132 74 L157.33 185.78 L182.67 188.54 L208 86.42 L233.33 199.58 L258.67 203.72 L284 202.34 L309.33 187.16 L334.67 126.44 L360 131.96 L385.33 167.84 L410.67 147.14 L436 181.64 L461.33 159.56 L486.67 130.58 L512 189.92 L537.33 181.64 L562.67 188.54 L588 173.36 L613.33 180.26 L638.67 187.16 L664 155.42 L689.33 140.24 L714.67 207.86 L740 195.44 L765.33 199.58 L790.67 196.82 L816 189.92 L816 212 L56 212 Z" fill="url(#fade)"/>
+  <path d="M56 126.44 L81.33 173.36 L106.67 126.44 L132 74 L157.33 185.78 L182.67 188.54 L208 86.42 L233.33 199.58 L258.67 203.72 L284 202.34 L309.33 187.16 L334.67 126.44 L360 131.96 L385.33 167.84 L410.67 147.14 L436 181.64 L461.33 159.56 L486.67 130.58 L512 189.92 L537.33 181.64 L562.67 188.54 L588 173.36 L613.33 180.26 L638.67 187.16 L664 155.42 L689.33 140.24 L714.67 207.86 L740 195.44 L765.33 199.58 L790.67 196.82 L816 189.92" stroke="#39d353" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
   <circle cx="56" cy="126.44" r="2.6" fill="#39d353"/>
-  <circle cx="81.33" cy="174.74" r="2.6" fill="#39d353"/>
-  <circle cx="106.67" cy="125.06" r="2.6" fill="#39d353"/>
+  <circle cx="81.33" cy="173.36" r="2.6" fill="#39d353"/>
+  <circle cx="106.67" cy="126.44" r="2.6" fill="#39d353"/>
   <circle cx="132" cy="74" r="2.6" fill="#39d353"/>
   <circle cx="157.33" cy="185.78" r="2.6" fill="#39d353"/>
   <circle cx="182.67" cy="188.54" r="2.6" fill="#39d353"/>
@@ -67,7 +67,7 @@
   <circle cx="740" cy="195.44" r="2.6" fill="#39d353"/>
   <circle cx="765.33" cy="199.58" r="2.6" fill="#39d353"/>
   <circle cx="790.67" cy="196.82" r="2.6" fill="#39d353"/>
-  <circle cx="816" cy="191.3" r="2.6" fill="#39d353"/>
+  <circle cx="816" cy="189.92" r="2.6" fill="#39d353"/>
 
   <!-- Axis labels -->
   <text x="56" y="232" fill="#6e7681" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Courier New', monospace" font-size="10" text-anchor="start">Oct 24</text>
@@ -78,6 +78,6 @@
   <text x="816" y="232" fill="#6e7681" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Courier New', monospace" font-size="10" text-anchor="end">Nov 23</text>
 
   <!-- Footer -->
-  <text x="22" y="254" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Courier New', monospace" font-size="12" xml:space="preserve"><tspan fill="#e6edf3" font-weight="bold">1004</tspan><tspan fill="#6e7681"> contributions</tspan><tspan fill="#6e7681">  //  peak 100/day</tspan></text>
+  <text x="22" y="254" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Courier New', monospace" font-size="12" xml:space="preserve"><tspan fill="#e6edf3" font-weight="bold">1005</tspan><tspan fill="#6e7681"> contributions</tspan><tspan fill="#6e7681">  //  peak 100/day</tspan></text>
   <text x="820" y="254" fill="#6e7681" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Courier New', monospace" font-size="11" text-anchor="end">updated 2026-11-23</text>
 </svg>
