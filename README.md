@@ -77,6 +77,10 @@
 </tr>
 </table>
 
+<br/>
+
+<img src="assets/languages.svg" width="100%" alt="Language breakdown across all repositories" />
+
 ---
 
 ### Stats
@@ -88,6 +92,10 @@
 <br/>
 
 <img src="assets/activity-graph.svg" width="100%" alt="Contribution activity - last 31 days" />
+
+<br/>
+
+<img src="assets/snake.svg" width="100%" alt="Snake eating the contribution grid" />
 
 </div>
 

@@ -1,34 +1,10 @@
 #!/usr/bin/env node
 // Renders assets/activity-graph.svg from the last 31 days of GitHub contributions.
-// No dependencies: uses the GraphQL API and writes a hand-built SVG that matches
-// the palette of assets/header.svg.
 
-import { writeFileSync, mkdirSync } from 'node:fs';
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { C, MONO, W, fail, graphql, prompt, save, terminal } from './lib.mjs';
 
 const USER = process.env.GRAPH_USER || 'ostrich-star';
-const TOKEN = process.env.GITHUB_TOKEN || process.env.TOKEN;
 const DAYS = 31;
-
-const OUT = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'assets', 'activity-graph.svg');
-
-const C = {
-  bg: '#0d1117',
-  bar: '#161b22',
-  border: '#30363d',
-  grid: '#21262d',
-  accent: '#39d353',
-  text: '#e6edf3',
-  muted: '#8b949e',
-  dim: '#484f58',
-};
-const MONO = "ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Courier New', monospace";
-
-if (!TOKEN) {
-  console.error('GITHUB_TOKEN (or TOKEN) is required');
-  process.exit(1);
-}
 
 const query = `
   query ($login: String!, $from: DateTime!, $to: DateTime!) {
@@ -45,43 +21,16 @@ const query = `
 const to = new Date();
 const from = new Date(to.getTime() - (DAYS - 1) * 86400000);
 
-const res = await fetch('https://api.github.com/graphql', {
-  method: 'POST',
-  headers: {
-    Authorization: `bearer ${TOKEN}`,
-    'Content-Type': 'application/json',
-    'User-Agent': 'activity-graph-generator',
-  },
-  body: JSON.stringify({
-    query,
-    variables: { login: USER, from: from.toISOString(), to: to.toISOString() },
-  }),
-});
+const data = await graphql(query, { login: USER, from: from.toISOString(), to: to.toISOString() });
 
-if (!res.ok) {
-  console.error(`GitHub API returned ${res.status}: ${await res.text()}`);
-  process.exit(1);
-}
-
-const body = await res.json();
-if (body.errors) {
-  console.error(JSON.stringify(body.errors, null, 2));
-  process.exit(1);
-}
-
-const days = body.data.user.contributionsCollection.contributionCalendar.weeks
+const days = data.user.contributionsCollection.contributionCalendar.weeks
   .flatMap((w) => w.contributionDays)
   .filter((d) => d.date >= from.toISOString().slice(0, 10))
   .sort((a, b) => a.date.localeCompare(b.date))
   .slice(-DAYS);
 
-if (days.length === 0) {
-  console.error('no contribution days returned');
-  process.exit(1);
-}
+if (days.length === 0) fail('no contribution days returned');
 
-// Layout — viewBox matches header.svg width so both cards render at the same scale.
-const W = 842;
 const H = 270;
 const PLOT = { x: 56, y: 74, w: W - 56 - 26, h: 138 };
 const peak = Math.max(...days.map((d) => d.contributionCount), 1);
@@ -120,33 +69,15 @@ const dots = pts
   })
   .join('\n');
 
-const svg = `<svg viewBox="0 0 ${W} ${H}" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-  <defs>
+const svg = terminal('~/contributions', H, `  <defs>
     <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="${C.accent}" stop-opacity="0.35"/>
       <stop offset="100%" stop-color="${C.accent}" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
-  <!-- Terminal window -->
-  <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="11" fill="${C.bg}" stroke="${C.border}" stroke-width="1"/>
-
-  <!-- Title bar -->
-  <rect x="1" y="1" width="${W - 2}" height="36" rx="11" fill="${C.bar}"/>
-  <rect x="1" y="26" width="${W - 2}" height="11" fill="${C.bar}"/>
-  <line x1="1" y1="37" x2="${W - 1}" y2="37" stroke="${C.border}" stroke-width="0.5"/>
-
-  <!-- Traffic lights -->
-  <circle cx="24" cy="19" r="6" fill="#ff5f56"/>
-  <circle cx="44" cy="19" r="6" fill="#ffbd2e"/>
-  <circle cx="64" cy="19" r="6" fill="#27c93f"/>
-
-  <!-- Title bar text -->
-  <text x="${W / 2}" y="23" fill="${C.muted}" font-family="${MONO}" font-size="12" text-anchor="middle">ostrich@github: ~/contributions</text>
-
   <!-- Command line -->
-  <text x="22" y="60" font-family="${MONO}" font-size="13" xml:space="preserve"><tspan fill="${C.accent}" font-weight="bold">$</tspan><tspan fill="${C.text}"> git log --since=${DAYS}.days --oneline | wc -l</tspan></text>
+  <text x="22" y="60" font-family="${MONO}" font-size="13" xml:space="preserve">${prompt(`git log --since=${DAYS}.days --oneline | wc -l`)}</text>
 
   <!-- Grid -->
 ${gridLines}
@@ -161,13 +92,9 @@ ${xLabels}
 
   <!-- Footer -->
   <text x="22" y="${H - 16}" font-family="${MONO}" font-size="12" xml:space="preserve"><tspan fill="${C.text}" font-weight="bold">${total}</tspan><tspan fill="${C.dim}"> contributions</tspan><tspan fill="${C.dim}">  //  peak ${peak}/day</tspan></text>
-  <text x="${W - 22}" y="${H - 16}" fill="${C.dim}" font-family="${MONO}" font-size="11" text-anchor="end">updated ${to.toISOString().slice(0, 10)}</text>
-</svg>
-`;
+  <text x="${W - 22}" y="${H - 16}" fill="${C.dim}" font-family="${MONO}" font-size="11" text-anchor="end">updated ${to.toISOString().slice(0, 10)}</text>`);
 
-mkdirSync(dirname(OUT), { recursive: true });
-writeFileSync(OUT, svg);
-console.log(`wrote ${OUT} (${days.length} days, ${total} contributions, peak ${peak})`);
+console.log(`wrote ${save('activity-graph.svg', svg)} (${days.length} days, ${total} contributions, peak ${peak})`);
 
 function niceCeiling(n) {
   if (n <= 5) return 5;
