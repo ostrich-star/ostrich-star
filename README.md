@@ -32,7 +32,7 @@
 <img src="https://img.shields.io/badge/React-161b22?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
 <img src="https://img.shields.io/badge/FastAPI-161b22?style=for-the-badge&logo=fastapi&logoColor=009688" alt="FastAPI" />
 <img src="https://img.shields.io/badge/Supabase-161b22?style=for-the-badge&logo=supabase&logoColor=3FCF8E" alt="Supabase" />
-<img src="https://img.shields.io/badge/TanStack%20Query-161b22?style=for-the-badge&logo=tanstack&logoColor=ECE8D1" alt="TanStack Query" />
+<img src="https://img.shields.io/badge/TanStack-161b22?style=for-the-badge&logo=tanstack&logoColor=ECE8D1" alt="TanStack" />
 <img src="https://img.shields.io/badge/shadcn%2Fui-161b22?style=for-the-badge&logo=shadcnui&logoColor=fff" alt="shadcn/ui" />
 </td>
 </tr>
@@ -56,11 +56,11 @@
 </td>
 </tr>
 <tr>
-<td><b>Infrastructure</b></td>
+<td><b>Infra</b></td>
 <td>
 <img src="https://img.shields.io/badge/Docker-161b22?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker" />
 <img src="https://img.shields.io/badge/Vercel-161b22?style=for-the-badge&logo=vercel&logoColor=fff" alt="Vercel" />
-<img src="https://img.shields.io/badge/PostgreSQL-161b22?style=for-the-badge&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/Postgres-161b22?style=for-the-badge&logo=postgresql&logoColor=4169E1" alt="Postgres" />
 <img src="https://img.shields.io/badge/Cloudflare-161b22?style=for-the-badge&logo=cloudflare&logoColor=F38020" alt="Cloudflare" />
 <img src="https://img.shields.io/badge/Tailscale-161b22?style=for-the-badge&logo=tailscale&logoColor=fff" alt="Tailscale" />
 <img src="https://img.shields.io/badge/WireGuard-161b22?style=for-the-badge&logo=wireguard&logoColor=fff" alt="WireGuard" />
