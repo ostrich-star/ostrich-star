@@ -6,8 +6,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'scripts/activity-graph.mjs'
-      - 'scripts/lib.mjs'
+      - 'scripts/**'
       - '.github/workflows/profile-cards.yml'
 
 permissions:
@@ -27,19 +26,22 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Render activity graph
+      - name: Render contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: dist/snake.svg?color_snake=#79c0ff&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
+
+      - name: Render cards
         env:
           # GRAPH_TOKEN is optional; the default GITHUB_TOKEN reads public
           # contribution data fine.
           GITHUB_TOKEN: ${{ secrets.GRAPH_TOKEN || secrets.GITHUB_TOKEN }}
           GRAPH_USER: ${{ github.repository_owner }}
-        run: node scripts/activity-graph.mjs
-
-      - name: Render contribution snake
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: assets/snake.svg?color_snake=#79c0ff&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
+        run: |
+          node scripts/activity-graph.mjs
+          node scripts/streak.mjs
+          node scripts/snake.mjs dist/snake.svg
 
       - name: Commit if changed
         run: |

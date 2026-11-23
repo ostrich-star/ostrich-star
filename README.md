@@ -87,7 +87,7 @@
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=ostrich-star&theme=github-dark-blue&hide_border=true" height="180" />
+<img src="assets/streak.svg" width="100%" alt="All-time contributions, current and longest streak" />
 
 <br/>
 

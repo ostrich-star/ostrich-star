@@ -17,7 +17,7 @@ export const C = {
   bright: '#f0f6fc',
   blue: '#79c0ff',
   muted: '#8b949e',
-  dim: '#484f58',
+  dim: '#6e7681', // GitHub's fg.subtle: secondary text still readable on the dark bg
 };
 
 export const MONO = "ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Courier New', monospace";

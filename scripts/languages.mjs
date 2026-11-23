@@ -44,7 +44,7 @@ const H = 270;
 const BAR = { x: 170, w: 560 };
 const body = rows
   .map(({ name, size, color }, i) => {
-    const y = 90 + i * 21;
+    const y = 88 + i * 20;
     const pct = (size / total) * 100;
     return `  <circle cx="27" cy="${y - 4}" r="4" fill="${color}"/>
   <text x="40" y="${y}" fill="${C.text}" font-family="${MONO}" font-size="13">${name}</text>
