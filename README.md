@@ -4,6 +4,8 @@
 
 <br/>
 
+[![Email](https://img.shields.io/badge/github.multiple538%40passmail.com-111?style=flat-square&logo=protonmail&logoColor=fff)](mailto:github.multiple538@passmail.com)
+&nbsp;&nbsp;
 [![GitHub](https://img.shields.io/github/followers/ostrich-star?style=flat-square&logo=github&label=Followers&color=111&logoColor=fff)](https://github.com/ostrich-star)
 
 </div>
