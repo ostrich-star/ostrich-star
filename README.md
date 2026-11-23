@@ -12,14 +12,68 @@
 
 ### Arsenal
 
-```
-Languages       TypeScript  -  Python  -  JavaScript  -  Rust  -  Go  -  Bash  -  Swift
-Frameworks      Next.js  -  React  -  FastAPI  -  Supabase  -  TanStack Query  -  shadcn/ui
-AI              Claude  -  Ollama  -  LM Studio  -  Pipecat  -  RAG  -  Voice agents
-Security        Kali  -  Nmap  -  Burp Suite  -  Metasploit  -  Wireshark  -  Hack The Box
-Infrastructure  Docker  -  Vercel  -  PostgreSQL  -  Cloudflare  -  Tailscale  -  WireGuard
-Platforms       macOS  -  Linux
-```
+<table>
+<tr>
+<td><b>Languages</b></td>
+<td>
+<img src="https://img.shields.io/badge/TypeScript-161b22?style=for-the-badge&logo=typescript&logoColor=3178C6" alt="TypeScript" />
+<img src="https://img.shields.io/badge/Python-161b22?style=for-the-badge&logo=python&logoColor=3776AB" alt="Python" />
+<img src="https://img.shields.io/badge/JavaScript-161b22?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
+<img src="https://img.shields.io/badge/Rust-161b22?style=for-the-badge&logo=rust&logoColor=fff" alt="Rust" />
+<img src="https://img.shields.io/badge/Go-161b22?style=for-the-badge&logo=go&logoColor=00ADD8" alt="Go" />
+<img src="https://img.shields.io/badge/Bash-161b22?style=for-the-badge&logo=gnubash&logoColor=4EAA25" alt="Bash" />
+<img src="https://img.shields.io/badge/Swift-161b22?style=for-the-badge&logo=swift&logoColor=F05138" alt="Swift" />
+</td>
+</tr>
+<tr>
+<td><b>Frameworks</b></td>
+<td>
+<img src="https://img.shields.io/badge/Next.js-161b22?style=for-the-badge&logo=nextdotjs&logoColor=fff" alt="Next.js" />
+<img src="https://img.shields.io/badge/React-161b22?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+<img src="https://img.shields.io/badge/FastAPI-161b22?style=for-the-badge&logo=fastapi&logoColor=009688" alt="FastAPI" />
+<img src="https://img.shields.io/badge/Supabase-161b22?style=for-the-badge&logo=supabase&logoColor=3FCF8E" alt="Supabase" />
+<img src="https://img.shields.io/badge/TanStack%20Query-161b22?style=for-the-badge&logo=tanstack&logoColor=ECE8D1" alt="TanStack Query" />
+<img src="https://img.shields.io/badge/shadcn%2Fui-161b22?style=for-the-badge&logo=shadcnui&logoColor=fff" alt="shadcn/ui" />
+</td>
+</tr>
+<tr>
+<td><b>AI</b></td>
+<td>
+<img src="https://img.shields.io/badge/Claude-161b22?style=for-the-badge&logo=claude&logoColor=D97757" alt="Claude" />
+<img src="https://img.shields.io/badge/Ollama-161b22?style=for-the-badge&logo=ollama&logoColor=fff" alt="Ollama" />
+<img src="https://img.shields.io/badge/LM%20Studio-161b22?style=for-the-badge&logo=lmstudio&logoColor=fff" alt="LM Studio" />
+<img src="https://img.shields.io/badge/Pipecat-161b22?style=for-the-badge&logo=pipecat&logoColor=fff" alt="Pipecat" />
+</td>
+</tr>
+<tr>
+<td><b>Security</b></td>
+<td>
+<img src="https://img.shields.io/badge/Kali%20Linux-161b22?style=for-the-badge&logo=kalilinux&logoColor=557C94" alt="Kali Linux" />
+<img src="https://img.shields.io/badge/Burp%20Suite-161b22?style=for-the-badge&logo=burpsuite&logoColor=FF6633" alt="Burp Suite" />
+<img src="https://img.shields.io/badge/Metasploit-161b22?style=for-the-badge&logo=metasploit&logoColor=2596CD" alt="Metasploit" />
+<img src="https://img.shields.io/badge/Wireshark-161b22?style=for-the-badge&logo=wireshark&logoColor=1679A7" alt="Wireshark" />
+<img src="https://img.shields.io/badge/Hack%20The%20Box-161b22?style=for-the-badge&logo=hackthebox&logoColor=9FEF00" alt="Hack The Box" />
+</td>
+</tr>
+<tr>
+<td><b>Infrastructure</b></td>
+<td>
+<img src="https://img.shields.io/badge/Docker-161b22?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker" />
+<img src="https://img.shields.io/badge/Vercel-161b22?style=for-the-badge&logo=vercel&logoColor=fff" alt="Vercel" />
+<img src="https://img.shields.io/badge/PostgreSQL-161b22?style=for-the-badge&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/Cloudflare-161b22?style=for-the-badge&logo=cloudflare&logoColor=F38020" alt="Cloudflare" />
+<img src="https://img.shields.io/badge/Tailscale-161b22?style=for-the-badge&logo=tailscale&logoColor=fff" alt="Tailscale" />
+<img src="https://img.shields.io/badge/WireGuard-161b22?style=for-the-badge&logo=wireguard&logoColor=fff" alt="WireGuard" />
+</td>
+</tr>
+<tr>
+<td><b>Platforms</b></td>
+<td>
+<img src="https://img.shields.io/badge/macOS-161b22?style=for-the-badge&logo=macos&logoColor=fff" alt="macOS" />
+<img src="https://img.shields.io/badge/Linux-161b22?style=for-the-badge&logo=linux&logoColor=FCC624" alt="Linux" />
+</td>
+</tr>
+</table>
 
 ---
 
